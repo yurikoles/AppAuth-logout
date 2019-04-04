@@ -395,7 +395,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 + (id<OIDExternalUserAgentSession>)
-    presentEndSessionRequest:(OIDEndSessionRequest *)request
+     logoutEndSessionRequest:(OIDEndSessionRequest *)request
            externalUserAgent:(id<OIDExternalUserAgent>)externalUserAgent
                     callback:(OIDEndSessionCallback)callback {
   OIDEndSessionImplementation *flowSession =

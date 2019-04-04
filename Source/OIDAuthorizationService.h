@@ -139,7 +139,7 @@ typedef void (^OIDRegistrationCompletion)(OIDRegistrationResponse *_Nullable reg
     @see http://openid.net/specs/openid-connect-session-1_0.html#RPLogout
  */
 + (id<OIDExternalUserAgentSession>)
-    presentEndSessionRequest:(OIDEndSessionRequest *)request
+     logoutEndSessionRequest:(OIDEndSessionRequest *)request
            externalUserAgent:(id<OIDExternalUserAgent>)externalUserAgent
                     callback:(OIDEndSessionCallback)callback;
 
