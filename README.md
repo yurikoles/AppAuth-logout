@@ -1,5 +1,5 @@
-![AppAuth for iOS and macOS](https://rawgit.com/yurikoles/AppAuth-iOS/master/appauth_lockup.svg)
-[![Build Status](https://travis-ci.com/yurikoles/AppAuth-iOS.svg?branch=dev-logout)](https://travis-ci.com/yurikoles/AppAuth-iOS)
+![AppAuth for iOS and macOS](https://raw.githubusercontent.com/yurikoles/AppAuth-iOS/dev-logout/appauth_lockup.svg)
+[![Build Status](https://travis-ci.com/yurikoles/AppAuth-iOS.svg?branch=master)](https://travis-ci.com/yurikoles/AppAuth-iOS)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 AppAuth for iOS and macOS is a client SDK for communicating with 
@@ -68,7 +68,7 @@ confidentiality of the client secrets may not work well.
 
 Want to try out AppAuth? Just run:
 
-    pod try AppAuth
+    pod try AppAuth-logout
 
 Follow the instructions in [Examples/README.md](Examples/README.md) to configure
 with your own OAuth client (you need to update 3 configuration points with your
@@ -83,7 +83,7 @@ AppAuth supports three options for dependency management.
 With [CocoaPods](https://guides.cocoapods.org/using/getting-started.html),
 add the following line to your `Podfile`:
 
-    pod 'AppAuth'
+    pod 'AppAuth-logout'
 
 Then run `pod install`.
 
@@ -92,7 +92,7 @@ Then run `pod install`.
 With [Carthage](https://github.com/Carthage/Carthage), add the following
 line to your `Cartfile`:
 
-    github "yurikoles/AppAuth-iOS" "dev-logout"
+    github "yurikoles/AppAuth-iOS" "master"
 
 Then run `carthage bootstrap`.
 
