@@ -26,10 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (id<OIDExternalUserAgentSession>) presentAuthorizationRequest:(OIDAuthorizationRequest *)request
     presentingViewController:(UIViewController *)presentingViewController
-                    callback:(OIDAuthorizationCallback)callback {
+                    callback:(OIDAuthorizationCallback)callback
+                 forceSafari:(BOOL)forceSafari
+{
   OIDExternalUserAgentIOS *externalUserAgent = [[OIDExternalUserAgentIOS alloc]
       initWithPresentingViewController:presentingViewController];
-  return [self presentAuthorizationRequest:request externalUserAgent:externalUserAgent callback:callback];
+  return [self presentAuthorizationRequest:request externalUserAgent:externalUserAgent callback:callback forceSafari:forceSafari];
 }
 
 @end

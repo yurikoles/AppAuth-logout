@@ -24,11 +24,13 @@
 
 + (id<OIDExternalUserAgentSession>)
     authStateByPresentingAuthorizationRequest:(OIDAuthorizationRequest *)authorizationRequest
-                                     callback:(OIDAuthStateAuthorizationCallback)callback {
+                                     callback:(OIDAuthStateAuthorizationCallback)callback
+                                  forceSafari:(BOOL)forceSafari {
   OIDExternalUserAgentMac *externalUserAgent = [[OIDExternalUserAgentMac alloc] init];
   return [self authStateByPresentingAuthorizationRequest:authorizationRequest
                                        externalUserAgent:externalUserAgent
-                                                callback:callback];
+                                                callback:callback
+                                             forceSafari:forceSafari];
 }
 
 @end

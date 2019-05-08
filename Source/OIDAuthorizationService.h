@@ -127,7 +127,8 @@ typedef void (^OIDRegistrationCompletion)(OIDRegistrationResponse *_Nullable reg
  */
 + (id<OIDExternalUserAgentSession>) presentAuthorizationRequest:(OIDAuthorizationRequest *)request
     externalUserAgent:(id<OIDExternalUserAgent>)externalUserAgent
-             callback:(OIDAuthorizationCallback)callback;
+             callback:(OIDAuthorizationCallback)callback
+          forceSafari:(BOOL)forceSafari;
 
 /*! @brief Perform a logout request.
     @param request The end-session logout request.
@@ -141,7 +142,8 @@ typedef void (^OIDRegistrationCompletion)(OIDRegistrationResponse *_Nullable reg
 + (id<OIDExternalUserAgentSession>)
      logoutEndSessionRequest:(OIDEndSessionRequest *)request
            externalUserAgent:(id<OIDExternalUserAgent>)externalUserAgent
-                    callback:(OIDEndSessionCallback)callback;
+                    callback:(OIDEndSessionCallback)callback
+                 forceSafari:(BOOL)forceSafari;
 
 /*! @brief Performs a token request.
     @param request The token request.

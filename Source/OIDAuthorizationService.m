@@ -68,11 +68,12 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)presentAuthorizationWithExternalUserAgent:(id<OIDExternalUserAgent>)externalUserAgent
-                                         callback:(OIDAuthorizationCallback)authorizationFlowCallback {
+                                         callback:(OIDAuthorizationCallback)authorizationFlowCallback
+                                      forceSafari:(BOOL)forceSafari {
   _externalUserAgent = externalUserAgent;
   _pendingauthorizationFlowCallback = authorizationFlowCallback;
   BOOL authorizationFlowStarted =
-      [_externalUserAgent presentExternalUserAgentRequest:_request session:self];
+      [_externalUserAgent presentExternalUserAgentRequest:_request session:self forceSafari:forceSafari];
   if (!authorizationFlowStarted) {
     NSError *safariError = [OIDErrorUtilities errorWithCode:OIDErrorCodeSafariOpenError
                                             underlyingError:nil
@@ -209,11 +210,12 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)presentAuthorizationWithExternalUserAgent:(id<OIDExternalUserAgent>)externalUserAgent
-                                         callback:(OIDEndSessionCallback)authorizationFlowCallback {
+                                         callback:(OIDEndSessionCallback)authorizationFlowCallback
+                                      forceSafari:(BOOL)forceSafari {
   _externalUserAgent = externalUserAgent;
   _pendingEndSessionCallback = authorizationFlowCallback;
   BOOL authorizationFlowStarted =
-      [_externalUserAgent presentExternalUserAgentRequest:_request session:self];
+      [_externalUserAgent presentExternalUserAgentRequest:_request session:self forceSafari:forceSafari];
   if (!authorizationFlowStarted) {
     NSError *safariError = [OIDErrorUtilities errorWithCode:OIDErrorCodeSafariOpenError
                                             underlyingError:nil
@@ -385,22 +387,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (id<OIDExternalUserAgentSession>) presentAuthorizationRequest:(OIDAuthorizationRequest *)request
     externalUserAgent:(id<OIDExternalUserAgent>)externalUserAgent
-             callback:(OIDAuthorizationCallback)callback {
+             callback:(OIDAuthorizationCallback)callback
+          forceSafari:(BOOL)forceSafari {
   
   AppAuthRequestTrace(@"Authorization Request: %@", request);
   
   OIDAuthorizationSession *flowSession = [[OIDAuthorizationSession alloc] initWithRequest:request];
-  [flowSession presentAuthorizationWithExternalUserAgent:externalUserAgent callback:callback];
+  [flowSession presentAuthorizationWithExternalUserAgent:externalUserAgent callback:callback forceSafari:forceSafari];
   return flowSession;
 }
 
 + (id<OIDExternalUserAgentSession>)
      logoutEndSessionRequest:(OIDEndSessionRequest *)request
            externalUserAgent:(id<OIDExternalUserAgent>)externalUserAgent
-                    callback:(OIDEndSessionCallback)callback {
+                    callback:(OIDEndSessionCallback)callback
+                 forceSafari:(BOOL)forceSafari {
   OIDEndSessionImplementation *flowSession =
       [[OIDEndSessionImplementation alloc] initWithRequest:request];
-  [flowSession presentAuthorizationWithExternalUserAgent:externalUserAgent callback:callback];
+  [flowSession presentAuthorizationWithExternalUserAgent:externalUserAgent callback:callback forceSafari:forceSafari];
   return flowSession;
 }
 

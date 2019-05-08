@@ -38,7 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (id<OIDExternalUserAgentSession>)
     authStateByPresentingAuthorizationRequest:(OIDAuthorizationRequest *)authorizationRequest
-                                     callback:(OIDAuthStateAuthorizationCallback)callback;
+                                     callback:(OIDAuthStateAuthorizationCallback)callback
+                                  forceSafari:(BOOL)forceSafari;
 
 @end
 

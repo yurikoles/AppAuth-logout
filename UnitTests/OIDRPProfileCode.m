@@ -51,7 +51,8 @@ static NSString *const kTestURIBase =
 @implementation OIDAuthorizationUICoordinatorNonInteractive
 
 - (BOOL)presentExternalUserAgentRequest:(id<OIDExternalUserAgentRequest> )request
-                                session:(id<OIDExternalUserAgentSession>)session {
+                                session:(id<OIDExternalUserAgentSession>)session
+                            forceSafari:(BOOL)forceSafari {
   _session = session;
   NSURL *requestURL = [request externalUserAgentRequestURL];
   NSMutableURLRequest *URLRequest = [[NSURLRequest requestWithURL:requestURL] mutableCopy];
@@ -241,7 +242,7 @@ typedef void (^UserInfoCompletion)(OIDAuthState *_Nullable authState,
         [token_exchange fulfill];
         completion(authorizationResponse, tokenResponse, tokenError);
       }];
-    }];
+    } forceSafari:true];
   }];
   [self waitForExpectationsWithTimeout:30 handler:nil];
 }
