@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'AppAuth-logout'
-  s.version      = '1.0.0.rc1'
+  s.version      = '1.0.1'
   s.summary      = 'AppAuth for iOS and macOS is a client SDK for communicating with OAuth 2.0 and OpenID Connect providers with logout support.'
 
   s.description  = <<~DESC
