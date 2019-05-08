@@ -1,5 +1,5 @@
-![AppAuth for iOS and macOS](https://rawgit.com/openid/AppAuth-iOS/master/appauth_lockup.svg)
-[![Build Status](https://travis-ci.org/openid/AppAuth-iOS.svg?branch=master)](https://travis-ci.org/openid/AppAuth-iOS)
+![AppAuth for iOS and macOS](https://rawgit.com/yurikoles/AppAuth-iOS/master/appauth_lockup.svg)
+[![Build Status](https://travis-ci.com/yurikoles/AppAuth-iOS.svg?branch=dev-logout)](https://travis-ci.com/yurikoles/AppAuth-iOS)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 AppAuth for iOS and macOS is a client SDK for communicating with 
@@ -92,7 +92,7 @@ Then run `pod install`.
 With [Carthage](https://github.com/Carthage/Carthage), add the following
 line to your `Cartfile`:
 
-    github "openid/AppAuth-iOS" "master"
+    github "yurikoles/AppAuth-iOS" "dev-logout"
 
 Then run `carthage bootstrap`.
 
