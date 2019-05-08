@@ -25,11 +25,13 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation OIDAuthorizationService (Mac)
 
 + (id<OIDExternalUserAgentSession>) presentAuthorizationRequest:(OIDAuthorizationRequest *)request
-                                                       callback:(OIDAuthorizationCallback)callback {
+                                                       callback:(OIDAuthorizationCallback)callback
+                                                    forceSafari:(BOOL)forceSafari {
   OIDExternalUserAgentMac *externalUserAgent = [[OIDExternalUserAgentMac alloc] init];
   return [self presentAuthorizationRequest:request
                          externalUserAgent:externalUserAgent
-                                  callback:callback];
+                                  callback:callback
+                               forceSafari:(BOOL)forceSafari];
 }
 
 @end

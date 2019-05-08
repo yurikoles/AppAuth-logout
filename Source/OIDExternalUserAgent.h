@@ -39,7 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
     @return YES If the request UI was successfully presented to the user.
  */
 - (BOOL)presentExternalUserAgentRequest:(id<OIDExternalUserAgentRequest> )request
-                                session:(id<OIDExternalUserAgentSession>)session;
+                                session:(id<OIDExternalUserAgentSession>)session
+                            forceSafari:(BOOL)forceSafari;
 
 /*! @brief Dimisses the external user-agent and calls completion when the dismiss operation ends.
     @param animated Whether or not the dismiss operation should be animated.

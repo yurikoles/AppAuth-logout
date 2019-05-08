@@ -1,2 +1,1 @@
-github "openid/AppAuth-iOS" "master"
-
+github "yurikoles/AppAuth-logout" "master"

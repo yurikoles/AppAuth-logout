@@ -32,7 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
         @c OIDExternalUserAgentSession.resumeExternalUserAgentFlowWithURL: message.
  */
 + (id<OIDExternalUserAgentSession>)presentAuthorizationRequest:(OIDAuthorizationRequest *)request
-                                                      callback:(OIDAuthorizationCallback)callback;
+                                                      callback:(OIDAuthorizationCallback)callback
+                                                   forceSafari:(BOOL)forceSafari;
 
 @end
 

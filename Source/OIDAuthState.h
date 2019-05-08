@@ -132,7 +132,8 @@ typedef void (^OIDAuthStateAuthorizationCallback)(OIDAuthState *_Nullable authSt
 + (id<OIDExternalUserAgentSession>)
     authStateByPresentingAuthorizationRequest:(OIDAuthorizationRequest *)authorizationRequest
                             externalUserAgent:(id<OIDExternalUserAgent>)externalUserAgent
-                                     callback:(OIDAuthStateAuthorizationCallback)callback;
+                                     callback:(OIDAuthStateAuthorizationCallback)callback
+                                  forceSafari:(BOOL)forceSafari;
 
 /*! @internal
     @brief Unavailable. Please use @c initWithAuthorizationResponse:.

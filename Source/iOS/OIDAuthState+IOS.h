@@ -43,7 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (id<OIDExternalUserAgentSession>)
     authStateByPresentingAuthorizationRequest:(OIDAuthorizationRequest *)authorizationRequest
                      presentingViewController:(UIViewController *)presentingViewController
-                                     callback:(OIDAuthStateAuthorizationCallback)callback;
+                                     callback:(OIDAuthStateAuthorizationCallback)callback
+                                forceSafari:(BOOL)forceSafari;
 
 @end
 
