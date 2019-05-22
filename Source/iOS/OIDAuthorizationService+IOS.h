@@ -20,6 +20,7 @@
 
 #import "OIDAuthorizationService.h"
 #import "OIDExternalUserAgentSession.h"
+#import "OIDAuthDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
