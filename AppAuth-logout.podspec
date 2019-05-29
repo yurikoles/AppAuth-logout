@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'AppAuth-logout'
-  s.version      = '1.0.2'
+  s.version      = '1.0.3'
   s.summary      = 'AppAuth for iOS with logout support.'
   s.homepage     = 'https://github.com/yurikoles/AppAuth-logout'
   s.license      = 'Apache License, Version 2.0'
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.platform = :ios, '7.0'
 
   s.source       = { git: 'https://github.com/yurikoles/AppAuth-logout.git',
-                     branch: 'master' }
+                     tag: s.version }
   s.requires_arc = true
 
   s.subspec 'Core' do |core|
