@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'AppAuth-logout'
-  s.version      = '1.0.3'
+  s.version      = '1.0.4'
   s.summary      = 'AppAuth for iOS with logout support.'
   s.homepage     = 'https://github.com/yurikoles/AppAuth-logout'
   s.license      = 'Apache License, Version 2.0'
